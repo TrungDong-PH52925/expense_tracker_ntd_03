@@ -16,13 +16,11 @@ const router = createRouter({
     routes,
 });
 // Chưa đăng nhập thì chuyển hướng sang trang Login, nếu không thì cho phép truy cập vào cách trang đích mong muốn.
-router.beforeEach((to, _, next) =>{
+router.beforeEach((to, _) =>{
     const token = localStorage.getItem("token");
 
     if (!token && to.path !== "/login"){
-        next("/login");
-    }else {
-        next();
+        return("/login");
     }
 });
 

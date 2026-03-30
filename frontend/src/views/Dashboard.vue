@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import api from '../api/axios';
 
 const dashboard = ref({});
+const categories = ref([]);
 const amount = ref("");
 const category_id = ref("");
 
@@ -45,6 +46,7 @@ onMounted(() =>{
 </script>
 
 <template>
+    <h1>Test words in process</h1>
     <div class="max-w-xl mx-auto mt-10">
         <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
         <!-- Category -->
